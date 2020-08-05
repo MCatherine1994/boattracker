@@ -2,6 +2,7 @@ var express = require("express");
 var app = express();
 var cors = require("cors");
 var fs = require("fs");
+var port = process.env.PORT || 5000;
 // var bodyParser = require("body-parser");
 
 app.use(cors());
@@ -27,7 +28,7 @@ app.post("/update", function (req, res) {
   res.end();
 });
 
-app.listen(process.env.PORT || 5000, "0.0.0.0", function () {
+app.listen(port, "0.0.0.0", function () {
   console.log(
     "Express server listening on port %d in %s mode",
     this.address().port,

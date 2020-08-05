@@ -4,7 +4,7 @@
   "description": "A control board for the sport fishing boats.",
   "main": "src/index.js",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js & react-scripts start",
     "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
