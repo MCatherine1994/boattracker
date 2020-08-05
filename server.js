@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(express.json());
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/build"));
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.resolve(__dirname, "public", "index.html"));
