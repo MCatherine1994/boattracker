@@ -48,7 +48,7 @@ class BoardPage extends Component {
       () => {
         axios
           .post(
-            `http://0.0.0.0:${process.env.PORT || 5000}/update`,
+            `//0.0.0.0:${process.env.PORT || 5000}/update`,
             this.state.newData
           )
           .then((res) => {
