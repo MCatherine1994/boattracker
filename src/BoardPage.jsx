@@ -75,7 +75,7 @@ class BoardPage extends Component {
    */
   render() {
     const { dataSource } = this.state;
-    // console.log(newData);
+    console.log(dataSource, process.env.PORT, process.env.HOST);
     return (
       <div className="boardpage">
         <div
