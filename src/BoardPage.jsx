@@ -48,7 +48,7 @@ class BoardPage extends Component {
       () => {
         axios
           .post(
-            `http://localhost:${process.env.PORT || 5000}/update`,
+            `http://0.0.0.0:${process.env.PORT || 5000}/update`,
             this.state.newData
           )
           .then((res) => {
@@ -64,7 +64,7 @@ class BoardPage extends Component {
    * @returns {none} returns nothing
    */
   componentDidMount() {
-    fetch(`http://localhost:${process.env.PORT || 5000}/posts`)
+    fetch(`http://0.0.0.0:${process.env.PORT || 5000}/posts`)
       .then((response) => response.json())
       .then((result) => this.setState({ dataSource: result, newData: result }));
   }
