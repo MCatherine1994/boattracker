@@ -64,7 +64,7 @@ class BoardPage extends Component {
    * @returns {none} returns nothing
    */
   componentDidMount() {
-    fetch(`http://0.0.0.0:${process.env.PORT || 5000}/posts`)
+    fetch("data.json")
       .then((response) => response.json())
       .then((result) => this.setState({ dataSource: result, newData: result }));
   }
