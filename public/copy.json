@@ -1,0 +1,73 @@
+{
+  "data": {
+    "docked": [
+      {
+        "title": "Boat Spring",
+        "description": "Built in 2010, condition good",
+        "id": "docked-0"
+      },
+      {
+        "title": "Boat Winter",
+        "description": "Built in 2012, condition good",
+        "id": "docked-1"
+      },
+      {
+        "title": "Boat Green",
+        "description": "Built in 2013, condition need mantenance",
+        "id": "docked-2"
+      }
+    ],
+    "outboundtosea": [
+      {
+        "title": "Boat Summber",
+        "description": "Built in 2008, condition need mantenance",
+        "id": "outboundtosea-1"
+      },
+      {
+        "title": "Boat Autum",
+        "description": "Built in 20015, condition good",
+        "id": "outboundtosea-2"
+      }
+    ],
+    "inboundtoharbor": [
+      {
+        "title": "Boat Star",
+        "description": "Built in 2017, condition new",
+        "id": "inboundtoharbor0"
+      },
+      {
+        "title": "Boat Moon",
+        "description": "Built in 2002, condition good",
+        "id": "inboundtoharbor1"
+      },
+      {
+        "title": "Boat Sun",
+        "description": "Built in 2016, condition need fuel",
+        "id": "inboundtoharbor2"
+      },
+      {
+        "title": "Boat Sea",
+        "description": "Built in 2013, condition good in use",
+        "id": "inboundtoharbor3"
+      }
+    ],
+    "maintenance": [
+      {
+        "title": "Boat Red Flower",
+        "description": "Built in 2017, condition new",
+        "id": "maintenance0"
+      },
+      {
+        "title": "Boat Fly",
+        "description": "Built in 2019, condition very new",
+        "id": "maintenance0"
+      },
+      {
+        "title": "Boat Swim",
+        "description": "Built in 2018, condition good",
+        "id": "maintenance0"
+      }
+    ]
+  },
+  "category": ["Docked", "Outbound to Sea", "Inbound to Harbor", "Maintenance"]
+}
