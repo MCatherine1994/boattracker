@@ -3,7 +3,7 @@ import axios from "axios";
 
 import Column from "./components/Column";
 
-import "../../node_modules/uikit/src/less/uikit.theme.less";
+import "../node_modules/uikit/src/less/uikit.theme.less";
 
 /**
  * A Board Page component
