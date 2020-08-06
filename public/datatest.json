@@ -65,19 +65,14 @@
       {
         "title": "Boat Fly",
         "description": "Built in 2019, condition very new",
-        "id": "maintenance0"
+        "id": "maintenance1"
       },
       {
         "title": "Boat Swim",
         "description": "Built in 2018, condition good",
-        "id": "maintenance0"
+        "id": "maintenance2"
       }
     ]
   },
-  "category": [
-    "Docked",
-    "Outbound to Sea",
-    "Inbound to Harbor",
-    "Maintenance"
-  ]
+  "category": ["Docked", "Outbound to Sea", "Inbound to Harbor", "Maintenance"]
 }

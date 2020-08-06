@@ -28,7 +28,6 @@ class BoardPage extends Component {
    */
   componentDidMount() {
     // fetch(`//0.0.0.0:${process.env.PORT || 5000}/posts`)
-    // fetch("./data.json")
     fetch("https://murmuring-brushlands-11465.herokuapp.com/posts")
       .then((response) => response.json())
       .then((result) => this.setState({ dataSource: result, newData: result }));
@@ -52,7 +51,7 @@ class BoardPage extends Component {
         }
       });
     });
-
+    console.log("newList", newList, "newRecord", newRecord);
     newRecord.forEach((record, i) => {
       record.id = `${groupID}-${i}`;
     });
@@ -149,8 +148,8 @@ class BoardPage extends Component {
    * @returns {JSX} returns React element
    */
   render() {
-    const { dataSource } = this.state;
-    console.log(dataSource);
+    const { dataSource, newData } = this.state;
+    console.log(newData);
     return (
       <div className="boardpage">
         <div className="uk-inline boardpage-button">
