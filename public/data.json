@@ -15,6 +15,11 @@
         "title": "Boat Green",
         "description": "Built in 2013, condition need mantenance",
         "id": "docked-2"
+      },
+      {
+        "title": "Boat New",
+        "description": "Test boat",
+        "id": "docked-3"
       }
     ],
     "outboundtosea": [

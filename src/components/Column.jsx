@@ -23,7 +23,6 @@ class Column extends Component {
    * @returns {none} returns nothing
    */
   componentDidMount() {
-    // this.setState({ newData: data });
     const { callback, title } = this.props;
     const id = title.toLowerCase().replace(/\s/g, "");
     UIkit.util.on(`#${id}`, "added", function (event) {
@@ -35,7 +34,6 @@ class Column extends Component {
         newList.push(d.id);
       });
       callback(newList, groupID);
-      // console.log("456 event", groupID, newList, data);
     });
 
     UIkit.util.on(`#${id}`, "stop", function (event) {
@@ -47,7 +45,6 @@ class Column extends Component {
         newList.push(d.id);
       });
       callback(newList, groupID);
-      // console.log("123 event", newList);
     });
   }
 

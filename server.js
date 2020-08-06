@@ -16,12 +16,12 @@ app.use(express.static(__dirname + "/build"));
 //   res.sendFile(path.resolve(__dirname, "public", "index.html"));
 // });
 
-// app.get("/posts", function (req, res) {
-//   const fileName = "public/data.json";
-//   const rawdata = fs.readFileSync(fileName);
-//   const results = JSON.parse(rawdata);
-//   res.send(results);
-// });
+app.get("/posts", function (req, res) {
+  const fileName = "public/data.json";
+  const rawdata = fs.readFileSync(fileName);
+  const results = JSON.parse(rawdata);
+  res.send(results);
+});
 
 app.post("/update", function (req, res) {
   const fileName = "public/data.json";

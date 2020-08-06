@@ -14,6 +14,24 @@ class InfoCard extends Component {
   render() {
     const { title, description, id } = this.props;
 
+    const noteSection = description ? (
+      <React.Fragment>
+        <hr style={{ marginTop: 0, marginBottom: 0 }} />
+        <p
+          style={{
+            marginTop: 0,
+            paddingTop: 6,
+            paddingLeft: 10,
+            paddingBottom: 6,
+          }}
+        >
+          {description}
+        </p>
+      </React.Fragment>
+    ) : (
+      ""
+    );
+
     return (
       <div className="uk-card uk-card-default infocard" id={id}>
         <h5
@@ -27,17 +45,7 @@ class InfoCard extends Component {
         >
           {title}
         </h5>
-        <hr style={{ marginTop: 0, marginBottom: 0 }} />
-        <p
-          style={{
-            marginTop: 0,
-            paddingTop: 6,
-            paddingLeft: 10,
-            paddingBottom: 6,
-          }}
-        >
-          {description}
-        </p>
+        {noteSection}
       </div>
     );
   }

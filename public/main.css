@@ -4,6 +4,11 @@
   padding-right: 10px !important;
 }
 
+.boardpage-button {
+  margin: 10px !important;
+  margin-left: 20px !important;
+}
+
 .boardpage-content {
   margin: 10px !important;
 }
@@ -11,4 +16,9 @@
 .column {
   padding-right: 10px !important;
   padding-left: 10px !important;
+}
+
+.uk-card {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
