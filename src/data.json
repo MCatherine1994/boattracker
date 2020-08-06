@@ -74,5 +74,10 @@
       }
     ]
   },
-  "category": ["Docked", "Outbound to Sea", "Inbound to Harbor", "Maintenance"]
+  "category": [
+    "Docked",
+    "Outbound to Sea",
+    "Inbound to Harbor",
+    "Maintenance"
+  ]
 }

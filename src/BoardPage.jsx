@@ -41,13 +41,13 @@ class BoardPage extends Component {
    * @returns {none} null
    */
   handleDataChange = (newList, groupID) => {
-    const { dataSource, newData } = this.state;
+    const { newData } = this.state;
     const newRecord = [];
 
     newList.forEach((id, i) => {
-      Object.keys(dataSource.data).forEach((key) => {
+      Object.keys(newData.data).forEach((key) => {
         if (id.includes(key)) {
-          const find = dataSource.data[key].filter((d) => d.id === id);
+          const find = newData.data[key].filter((d) => d.id === id);
           newRecord.push(find[0]);
         }
       });
@@ -67,8 +67,8 @@ class BoardPage extends Component {
       () => {
         axios
           .post(
-            `//0.0.0.0:${process.env.PORT || 5000}/update`,
-            // "https://murmuring-brushlands-11465.herokuapp.com/update",
+            // `//0.0.0.0:${process.env.PORT || 5000}/update`,
+            "https://murmuring-brushlands-11465.herokuapp.com/update",
             this.state.newData
           )
           .then((res) => {
@@ -108,8 +108,8 @@ class BoardPage extends Component {
       () => {
         axios
           .post(
-            `//0.0.0.0:${process.env.PORT || 5000}/update`,
-            // "https://murmuring-brushlands-11465.herokuapp.com/update",
+            // `//0.0.0.0:${process.env.PORT || 5000}/update`,
+            "https://murmuring-brushlands-11465.herokuapp.com/update",
             this.state.newData
           )
           .then((res) => {
