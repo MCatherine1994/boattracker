@@ -66,7 +66,8 @@ class BoardPage extends Component {
       () => {
         axios
           .post(
-            `//0.0.0.0:${process.env.PORT || 5000}/update`,
+            // `//0.0.0.0:${process.env.PORT || 5000}/update`,
+            "https://murmuring-brushlands-11465.herokuapp.com/update",
             this.state.newData
           )
           .then((res) => {
@@ -106,7 +107,8 @@ class BoardPage extends Component {
       () => {
         axios
           .post(
-            `//0.0.0.0:${process.env.PORT || 5000}/update`,
+            // `//0.0.0.0:${process.env.PORT || 5000}/update`,
+            "https://murmuring-brushlands-11465.herokuapp.com/update",
             this.state.newData
           )
           .then((res) => {
@@ -147,7 +149,7 @@ class BoardPage extends Component {
    */
   render() {
     const { dataSource } = this.state;
-    console.log("host", process.env.PORT, "port", process.env.PORT);
+
     return (
       <div className="boardpage">
         <div className="uk-inline boardpage-button">
