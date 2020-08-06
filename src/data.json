@@ -2,36 +2,36 @@
   "data": {
     "docked": [
       {
-        "title": "Boat Spring",
-        "description": "Built in 2010, condition good",
-        "id": "docked-0"
-      },
-      {
         "title": "Boat Winter",
         "description": "Built in 2012, condition good",
-        "id": "docked-1"
+        "id": "docked-0"
       },
       {
         "title": "Boat Green",
         "description": "Built in 2013, condition need mantenance",
-        "id": "docked-2"
+        "id": "docked-1"
       },
       {
         "title": "Boat New",
         "description": "Test boat",
-        "id": "docked-3"
+        "id": "docked-2"
       }
     ],
     "outboundtosea": [
       {
+        "title": "Boat Spring",
+        "description": "Built in 2010, condition good",
+        "id": "outboundtosea-0"
+      },
+      {
         "title": "Boat Summber",
         "description": "Built in 2008, condition need mantenance",
-        "id": "outboundtosea-0"
+        "id": "outboundtosea-1"
       },
       {
         "title": "Boat Autum",
         "description": "Built in 20015, condition good",
-        "id": "outboundtosea-1"
+        "id": "outboundtosea-2"
       }
     ],
     "inboundtoharbor": [
@@ -74,10 +74,5 @@
       }
     ]
   },
-  "category": [
-    "Docked",
-    "Outbound to Sea",
-    "Inbound to Harbor",
-    "Maintenance"
-  ]
+  "category": ["Docked", "Outbound to Sea", "Inbound to Harbor", "Maintenance"]
 }
