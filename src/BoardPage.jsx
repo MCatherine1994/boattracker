@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import UIkit from "uikit";
 
 import Column from "./components/Column";
 
@@ -95,28 +96,42 @@ class BoardPage extends Component {
    * @returns {none} null
    */
   handleInputAdd = () => {
-    const { newBoat, newData } = this.state;
-    const leftMost = newData.category[0].toLowerCase().replace(/\s/g, "");
-    const newList = [...newData.data[leftMost]];
-    newBoat.id = `${leftMost}-${newList.length}`;
-    newList.push(newBoat);
-    this.setState(
-      {
-        newData: { ...newData, data: { ...newData.data, [leftMost]: newList } },
-      },
-      () => {
-        axios
-          .post(
-            // `//0.0.0.0:5000/update`,
-            "https://murmuring-brushlands-11465.herokuapp.com/update",
-            this.state.newData
-          )
-          .then((res) => {
-            // response status
-            console.log(res.statusText);
-          });
-      }
-    );
+    const { newBoat, newData, dataSource } = this.state;
+    var dropdown = UIkit.dropdown(".uk-dropdown", {
+      delayHide: 0,
+    });
+    dropdown.hide();
+    if (newBoat.title !== "" || newBoat.description !== "") {
+      const leftMost = newData.category[0].toLowerCase().replace(/\s/g, "");
+      const newList = [...newData.data[leftMost]];
+      newBoat.id = `${leftMost}-${newList.length}`;
+      newList.push(newBoat);
+
+      this.setState(
+        {
+          newData: {
+            ...newData,
+            data: { ...newData.data, [leftMost]: newList },
+          },
+          dataSource: {
+            ...dataSource,
+            data: { ...dataSource.data, [leftMost]: newList },
+          },
+        },
+        () => {
+          axios
+            .post(
+              // `//0.0.0.0:5000/update`,
+              "https://murmuring-brushlands-11465.herokuapp.com/update",
+              this.state.newData
+            )
+            .then((res) => {
+              // response status
+              console.log(res.statusText);
+            });
+        }
+      );
+    }
   };
 
   /**
