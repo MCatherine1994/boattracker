@@ -24,6 +24,7 @@ app.get("/posts", function (req, res) {
 });
 
 app.post("/update", function (req, res) {
+  console.log(12345678, "got request");
   const fileName = "public/data.json";
   const JSONData = JSON.stringify(req.body, null, 2);
   fs.writeFileSync(fileName, JSONData, (error) => {
@@ -34,7 +35,7 @@ app.post("/update", function (req, res) {
   res.end();
 });
 
-app.listen(port, function () {
+app.listen(port, "0.0.0.0", function () {
   console.log(
     "Express server listening on port %d in %s mode",
     this.address().port,
