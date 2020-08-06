@@ -51,7 +51,7 @@ class BoardPage extends Component {
         }
       });
     });
-    console.log("newList", newList, "newRecord", newRecord);
+    // console.log("newList", newList, "newRecord", newRecord);
     newRecord.forEach((record, i) => {
       record.id = `${groupID}-${i}`;
     });
@@ -148,8 +148,8 @@ class BoardPage extends Component {
    * @returns {JSX} returns React element
    */
   render() {
-    const { dataSource, newData } = this.state;
-    console.log(newData);
+    const { dataSource } = this.state;
+
     return (
       <div className="boardpage">
         <div className="uk-inline boardpage-button">

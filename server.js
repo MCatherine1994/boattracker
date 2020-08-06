@@ -2,7 +2,6 @@ var express = require("express");
 var app = express();
 var cors = require("cors");
 var fs = require("fs");
-// var path = require("path");
 var bodyParser = require("body-parser");
 var port = process.env.PORT || 5000;
 
