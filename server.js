@@ -38,6 +38,7 @@ app.listen(port, "0.0.0.0", function () {
   console.log(
     "Express server listening on port %d in %s mode",
     this.address().port,
+    this.address().host,
     app.settings.env
   );
 });

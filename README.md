@@ -5,3 +5,19 @@ A Node.js application developed using Express Web Freamwork with React UI patter
 ### **Design Restriction**
 
 <!-- The application is deployed using a free heroku dynos account which -->
+
+### **Set up the Project Locally**
+
+- [Install node.js environment](https://nodejs.org/en/download/package-manager/)
+- In the project directory, install package dependencies
+  ```
+  $ npm install
+  ```
+- Run the backend server
+  ```
+  $ npm start
+  ```
+- Run the app
+  ```
+  $ npm run-script runlocal
+  ```
