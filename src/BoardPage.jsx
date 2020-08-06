@@ -28,7 +28,8 @@ class BoardPage extends Component {
    */
   componentDidMount() {
     // fetch(`//0.0.0.0:${process.env.PORT || 5000}/posts`)
-    fetch("data.json")
+    // fetch("./data.json")
+    fetch("https://murmuring-brushlands-11465.herokuapp.com/posts")
       .then((response) => response.json())
       .then((result) => this.setState({ dataSource: result, newData: result }));
   }
@@ -66,8 +67,8 @@ class BoardPage extends Component {
       () => {
         axios
           .post(
-            // `//0.0.0.0:${process.env.PORT || 5000}/update`,
-            "https://murmuring-brushlands-11465.herokuapp.com/update",
+            `//0.0.0.0:${process.env.PORT || 5000}/update`,
+            // "https://murmuring-brushlands-11465.herokuapp.com/update",
             this.state.newData
           )
           .then((res) => {
@@ -107,8 +108,8 @@ class BoardPage extends Component {
       () => {
         axios
           .post(
-            // `//0.0.0.0:${process.env.PORT || 5000}/update`,
-            "https://murmuring-brushlands-11465.herokuapp.com/update",
+            `//0.0.0.0:${process.env.PORT || 5000}/update`,
+            // "https://murmuring-brushlands-11465.herokuapp.com/update",
             this.state.newData
           )
           .then((res) => {
@@ -149,7 +150,7 @@ class BoardPage extends Component {
    */
   render() {
     const { dataSource } = this.state;
-
+    console.log(dataSource);
     return (
       <div className="boardpage">
         <div className="uk-inline boardpage-button">

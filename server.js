@@ -16,8 +16,10 @@ app.use(express.static(__dirname + "/build"));
 //   res.sendFile(path.resolve(__dirname, "public", "index.html"));
 // });
 
+fs.readdir("src", (err, files) => {});
+
 app.get("/posts", function (req, res) {
-  const fileName = "public/data.json";
+  const fileName = "src/data.json";
   const rawdata = fs.readFileSync(fileName);
   const results = JSON.parse(rawdata);
   res.send(results);
@@ -25,7 +27,7 @@ app.get("/posts", function (req, res) {
 
 app.post("/update", function (req, res) {
   console.log(12345678, "got request");
-  const fileName = "public/data.json";
+  const fileName = "src/data.json";
   const JSONData = JSON.stringify(req.body, null, 2);
   fs.writeFileSync(fileName, JSONData, (error) => {
     console.log("[Numbers Data] Error - Writing file failed");
