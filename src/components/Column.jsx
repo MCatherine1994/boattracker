@@ -70,7 +70,7 @@ class Column extends Component {
                     <InfoCard
                       title={d.title}
                       description={d.description}
-                      key={d.title.toLowerCase()}
+                      key={`${d.title.toLowerCase()}${i}`}
                       id={d.id} //`${title.toLowerCase().replace(/\s/g, "")}-${i}`
                     />
                   );

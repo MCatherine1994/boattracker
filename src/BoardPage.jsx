@@ -27,7 +27,7 @@ class BoardPage extends Component {
    * @returns {none} returns nothing
    */
   componentDidMount() {
-    // fetch(`//0.0.0.0:${process.env.PORT || 5000}/posts`)
+    // fetch(`//0.0.0.0:5000/posts`)
     fetch("https://murmuring-brushlands-11465.herokuapp.com/posts")
       .then((response) => response.json())
       .then((result) => this.setState({ dataSource: result, newData: result }));
@@ -66,7 +66,7 @@ class BoardPage extends Component {
       () => {
         axios
           .post(
-            // `//0.0.0.0:${process.env.PORT || 5000}/update`,
+            // `//0.0.0.0:5000/update`,
             "https://murmuring-brushlands-11465.herokuapp.com/update",
             this.state.newData
           )
@@ -107,7 +107,7 @@ class BoardPage extends Component {
       () => {
         axios
           .post(
-            // `//0.0.0.0:${process.env.PORT || 5000}/update`,
+            // `//0.0.0.0:5000/update`,
             "https://murmuring-brushlands-11465.herokuapp.com/update",
             this.state.newData
           )
@@ -174,12 +174,12 @@ class BoardPage extends Component {
           uk-grid=""
         >
           {dataSource.category && dataSource.category.length > 0
-            ? dataSource.category.map((d) => {
+            ? dataSource.category.map((d, i) => {
                 return (
                   <Column
                     data={dataSource.data[d.toLowerCase().replace(/\s/g, "")]}
                     title={d}
-                    key={d.toLowerCase().replace(/\s/g, "")}
+                    key={`${d.toLowerCase().replace(/\s/g, "")}${i}`}
                     callback={this.handleDataChange}
                   />
                 );
